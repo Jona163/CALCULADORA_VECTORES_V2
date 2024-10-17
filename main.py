@@ -118,3 +118,20 @@ while repetir:
                     ax = graficarComp([Vr])
                     ax.set_title("Vectores")
                     plt.show()
+                else:
+                    "OK :)"
+                rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                if rep == "s" or rep == "S":
+                    repetir = True
+                else:
+                    repetir=False
+            elif v == 3:
+                print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 1")
+                a=int(input())
+                print("Ingresa la coordenada en el eje y del vector : 1")
+                b=int(input())
+                infovector=ParOrdenado(a,b)
+                print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
+                a2=int(input())
+                print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 2")
+                b2=int(input())
