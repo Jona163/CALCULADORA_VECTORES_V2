@@ -62,3 +62,27 @@ while repetir:
     print("1. Graficar 2D")
     print("2. Grafiar 3D")
     case=int(input("Selecciona una Opcion "))
+
+    if case == 1:
+        print("**************Graficadora de Vectores**************")
+        print("1. Graficar por Coordenadas")
+        print("2. Grafiar por Magnitud y angulo")
+        print("3. Operaciones basicas de vectores")
+        print("4. Ecuacionn de la recta")
+        case2=int(input("Selecciona una Opcion ")) 
+
+        if case2 == 1:
+            v=int(input("\033[1;32m"+"Digite la cantidad de vectores a graficar de 1 a 4: "))
+
+            if v == 1:
+                print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 1")
+                a=int(input())
+                print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 1")
+                b=int(input())
+                infovector=ParOrdenado(a,b)
+                ax = graficarComp([infovector])
+                ax.set_title("Vectores")
+                plt.show()
+                rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                if rep == "s" or rep == "S":
+                    repetir = True
