@@ -270,3 +270,21 @@ while repetir:
                 else:
                     repetir=False
             elif v == 3:
+                print("\033[1;32m"+"Ingresa la magnitud del vector : 1")
+                a=int(input())
+                print("\033[1;32m"+"Ingresa el angulo del  vector : 1")
+                b=int(input())
+                x=(a*math.cos(b))
+                y=(a*math.sin(b))
+                infovector=ParOrdenado(x,y)
+                print("\033[1;32m"+"Ingresa Ingresa la magnitud del vector : 2")
+                a2=int(input())
+                print("\033[1;32m"+"Ingresa el angulo del  vector : 2")
+                b2=int(input())
+                x2=(a2*math.cos(b2))
+                y2=(a2*math.sin(b2))
+                infovector2=ParOrdenado(x2,y2)
+                print("\033[1;32m"+"Ingresa la magnitud del vector : 3")
+                a3=int(input())
+                print("\033[1;32m"+"Ingresa el angulo del  vector : 3")
+                b3=int(input())
