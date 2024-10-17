@@ -288,3 +288,25 @@ while repetir:
                 a3=int(input())
                 print("\033[1;32m"+"Ingresa el angulo del  vector : 3")
                 b3=int(input())
+                x3=(a*math.cos(b3))
+                y3=(a*math.sin(b3))
+                infovector3=ParOrdenado(x3,y3)
+                ax = graficarComp([infovector,infovector2,infovector3])
+                ax.set_title("Vectores")
+                plt.show()
+                r=input(("\033[1;32m"+"Desea calcular el vector resultante S/N: "))
+                if r == "s" or r == "S":
+                    rx=(x+x2+x3)
+                    ry=(y+y2+y3)
+                    Result=math.sqrt(((rx*rx)+(ry*ry)))
+                    angulo=(math.atan(ry/rx))*(180/pi)
+                    if angulo>0:
+                        ang=angulo+180
+                    elif angulo<0:
+                        ang=angulo-180
+                    xr=Result*math.cos(ang)
+                    yr=Result*math.sin(ang)
+                    Vr=ParOrdenado(xr,yr)
+                    ax = graficarComp([Vr])
+                    ax.set_title("Vectores")
+                    plt.show()
