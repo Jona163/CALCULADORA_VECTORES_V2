@@ -15,3 +15,18 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import axes3d
 from fractions import Fraction                          
 from decimal import Decimal
+
+
+class ParOrdenado:
+    def __init__(self,a,b):
+        self.real = int(a)
+        self.imaginario = int(b)
+
+def graficarComp(lista, colores = ["r", "g", "b"]):
+    x = [0]*len(lista)
+    y = [0]*len(lista)
+    u = []
+    v = []
+    for vector in lista:
+      u.append(vector.real)
+      v.append(vector.imaginario)
