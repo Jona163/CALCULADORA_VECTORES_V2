@@ -14,6 +14,7 @@ Esta aplicación permite realizar operaciones básicas y avanzadas con vectores 
 - Normalización de vectores.
 - Determinación del ángulo entre dos vectores.
 - Proyección de un vector sobre otro.
+- Graficacion en 2D y 3D
 
 ## Instalación
 
