@@ -30,3 +30,19 @@ def graficarComp(lista, colores = ["r", "g", "b"]):
     for vector in lista:
       u.append(vector.real)
       v.append(vector.imaginario)
+    
+    izda = min(-1, min(u)-1)
+    dcha = max(1, max(u)+1)
+    abajo = min(-1, min(v)-1)
+    arriba = max(1, max(v)+1)
+
+    plt.quiver(x, y, u, v,  angles='xy', scale_units='xy', scale=1,
+               color=colores)
+    plt.axhline(0, color='black')
+    plt.axvline(0, color='black')
+
+    plt.xlim([izda, dcha])
+    plt.ylim([abajo, arriba])
+    plt.xlabel('x')
+    plt.ylabel('y')
+    return plt.gca()
