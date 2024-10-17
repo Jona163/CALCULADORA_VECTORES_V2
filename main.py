@@ -46,3 +46,19 @@ def graficarComp(lista, colores = ["r", "g", "b"]):
     plt.xlabel('x')
     plt.ylabel('y')
     return plt.gca()
+
+
+def switch(case, q, w, e, r):
+    sw={
+    }
+    return sw.get(case,default())
+
+def default():
+    return "La opcion %s no existe en el menu"% case
+
+repetir=True
+while repetir:
+    print("**************Graficadora de Vectores**************")
+    print("1. Graficar 2D")
+    print("2. Grafiar 3D")
+    case=int(input("Selecciona una Opcion "))
