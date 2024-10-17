@@ -207,3 +207,24 @@ while repetir:
                     ax = graficarComp([Vr])
                     ax.set_title("Vectores")
                     plt.show()
+                else:
+                    "OK :)"
+            rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+            if rep == "s" or rep == "S":
+                repetir = True
+            else:
+                repetir=False
+        elif case2 == 2:
+            v=int(input("\033[1;32m"+"Digite la cantidad de vectores a graficar de 1 a 4: "))
+
+            if v == 1:
+                print("\033[1;32m"+"Ingresa la magnitud del vector : 1")
+                a=int(input())
+                print("\033[1;32m"+"Ingresa Ingresa el angulo del  vector : 1")
+                b=int(input())
+                x=(a*math.cos(b))
+                y=(a*math.sin(b))
+                infovector=ParOrdenado(x,y)
+                ax = graficarComp([infovector])
+                ax.set_title("Vectores")
+                plt.show()
