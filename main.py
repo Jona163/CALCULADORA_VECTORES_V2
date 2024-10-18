@@ -487,3 +487,34 @@ while repetir:
                     plt.show()
                 else:
                     "OK :)"
+                rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                if rep == "s" or rep == "S":
+                    repetir = True
+                else:
+                    repetir=False
+            elif v == 3:
+                print("Ingresa la coordenada en el eje x del vector : 1")
+                a=int(input())
+                x = np.array([[0,a]])
+                print("Ingresa la coordenada en el eje y del vector : 1")
+                b=int(input())
+                y = np.array([[0,b]])
+                print("Ingresa la coordenada en el eje z del vector : 1")
+                c=int(input())
+                z = np.array([[0,c]])
+                print("Ingresa la coordenada en el eje x del vector : 2")
+                a2=int(input())
+                x2 = np.array([[0,a2]])
+                print("Ingresa la coordenada en el eje y del vector : 2")
+                b2=int(input())
+                y2 = np.array([[0,b2]])
+                print("Ingresa la coordenada en el eje z del vector : 2")
+                c2=int(input())
+                z2 = np.array([[0,c2]])
+                print("Ingresa la coordenada en el eje x del vector : 3")
+                a3=int(input())
+                x3 = np.array([[0,a3]])
+                print("Ingresa la coordenada en el eje y del vector : 3")
+                b3=int(input())
+                y3 = np.array([[0,b3]])
+                print("Ingresa la coordenada en el eje z del vector : 3")
