@@ -342,3 +342,26 @@ while repetir:
                 ax = graficarComp([infovector,infovector2,infovector3,infovector4])
                 ax.set_title("Vectores")
                 plt.show()
+                r=input(("\033[1;32m"+"Desea calcular el vector resultante S/N: "))
+                if r == "s" or r == "S":
+                    rx=(x+x2+x3+x4)
+                    ry=(y+y2+y3+y4)
+                    Result=math.sqrt(((rx*rx)+(ry*ry)))
+                    angulo=(math.atan(ry/rx))*(180/pi)
+                    if angulo>0:
+                        ang=angulo+180
+                    elif angulo<0:
+                        ang=angulo+180
+                    xr=Result*math.cos(ang)
+                    yr=Result*math.sin(ang)
+                    Vr=ParOrdenado(xr,yr)
+                    ax = graficarComp([Vr])
+                    ax.set_title("Vectores")
+                    plt.show()
+                else:
+                    "OK :)"
+            rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+            if rep == "s" or rep == "S":
+                repetir = True
+            else:
+                repetir=False
