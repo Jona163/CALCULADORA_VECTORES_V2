@@ -365,3 +365,29 @@ while repetir:
                 repetir = True
             else:
                 repetir=False
+        elif case2 == 3:
+            print("\033[1;32m"+"Como vas a calcular")
+            print("\033[1;32m"+"1. Por componentes")
+            print("\033[1;32m"+"2. Por magnitudes y angulos")
+            n=int(input())
+            if n == 1:
+                print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 1")
+                a=int(input())
+                print("Ingresa la coordenada en el eje y del vector : 1")
+                b=int(input())
+                infovector=ParOrdenado(a,b)
+                print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
+                a2=int(input())
+                print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 2")
+                b2=int(input())
+                mag1 = sqrt((a*a)+(b*b))
+                mag2 = sqrt((a2*a2)+(b2*b2))
+                magr = (mag1*mag2)
+                r = (a*a2) + (b*b2)
+                te = acos((r)/(magr))
+                print("\033[1;32m"+"Teta : ",te)
+                pr = (magr)*(cos(te))
+                print("\033[1;32m"+"Su producto punto es: ",pr)
+                rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                if rep == "s" or rep == "S":
+                    repetir = True
