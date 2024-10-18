@@ -439,3 +439,28 @@ while repetir:
                 else:
                     repetir=False
             elif v == 2:
+                print("Ingresa la coordenada en el eje x del vector : 1")
+                a=int(input())
+                x = np.array([[0,a]])
+                print("Ingresa la coordenada en el eje y del vector : 1")
+                b=int(input())
+                y = np.array([[0,b]])
+                print("Ingresa la coordenada en el eje z del vector : 1")
+                c=int(input())
+                z = np.array([[0,c]])
+                print("Ingresa la coordenada en el eje x del vector : 2")
+                a2=int(input())
+                x2 = np.array([[0,a2]])
+                print("Ingresa la coordenada en el eje y del vector : 2")
+                b2=int(input())
+                y2 = np.array([[0,b2]])
+                print("Ingresa la coordenada en el eje z del vector : 2")
+                c2=int(input())
+                z2 = np.array([[0,c2]])
+                fig = plt.figure()
+                ax1 = fig.add_subplot(111,projection='3d')
+                ax1.plot_wireframe(x, y, z)
+                ax1.plot_wireframe(x2, y2, z2)
+                plt.show()
+                r=input(("Desea calcular el vector resultante S/N: "))
+                if r == "s" or r == "S":
