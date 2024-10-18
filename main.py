@@ -391,3 +391,20 @@ while repetir:
                 rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
                 if rep == "s" or rep == "S":
                     repetir = True
+                else:
+                    repetir=False
+            elif n == 2:
+                print("\033[1;32m"+"Ingrese la magnitud del vector A: ")
+                m1=int(input())
+                print("\033[1;32m"+"Ingrese la magnitud del vector B: ")
+                m2=int(input())
+                mr = (m1*m2)
+                print("\033[1;32m"+"Ingresa el angulo: ")
+                a=int(input())
+                pr = (mr)*(cos(a))
+                print("\033[1;32m"+"Su producto punto es: ",pr)   
+                rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                if rep == "s" or rep == "S":
+                    repetir = True
+                else:
+                    repetir=False             
