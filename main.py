@@ -408,3 +408,34 @@ while repetir:
                     repetir = True
                 else:
                     repetir=False             
+
+    elif case == 2:
+        print("**************Graficadora de Vectores**************")
+        print("1. Graficar por Coordenadas")
+        print("2. Producto punto")
+        print("3. Poducto Cruz")
+        case2=int(input("Selecciona una Opcion ")) 
+
+        if case2 == 1:
+            v=int(input("\033[1;32m"+"Digite la cantidad de vectores a graficar de 1 a 4: "))
+
+            if v == 1:
+                print("Ingresa la coordenada en el eje x del vector : 1")
+                a=int(input())
+                x = np.array([[0,a]])
+                print("Ingresa la coordenada en el eje y del vector : 1")
+                b=int(input())
+                y = np.array([[0,b]])
+                print("Ingresa la coordenada en el eje z del vector : 1")
+                c=int(input())
+                z= np.array([[0,c]])
+                fig = plt.figure()
+                ax1 = fig.add_subplot(111,projection='3d')
+                ax1.plot_wireframe(x, y, z)
+                plt.show()
+                rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                if rep == "s" or rep == "S":
+                    repetir = True
+                else:
+                    repetir=False
+            elif v == 2:
