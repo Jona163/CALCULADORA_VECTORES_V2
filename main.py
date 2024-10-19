@@ -704,3 +704,17 @@ while repetir:
 
             if case3 == 1:
                 v=int(input("\033[1;32m"+"Digite la cantidad de vectores a graficar de 2 a 4: "))
+
+                if v == 2:
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 1")
+                    a=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 1")
+                    b=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje z del vector : 1")
+                    c=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
+                    a2=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 2")
+                    b2=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje z del vector : 2")
+                    c2=int(input())
