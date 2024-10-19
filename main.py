@@ -718,3 +718,18 @@ while repetir:
                     b2=int(input())
                     print("\033[1;32m"+"Ingresa la coordenada en el eje z del vector : 2")
                     c2=int(input())
+                    v=[]
+                    x=a+a2
+                    y=b+b2
+                    z=c+c2
+                    V=[x,y,z]
+                    print("Su vector resultante es: ", V)
+                    r=int(input("Desea graficvarlo 1.SI 2.NO: "))
+                    if r == 1:
+                        xx=np.array([[0,x]])
+                        yy=np.array([[0,y]])
+                        zz=np.array([[0,z]])
+                        fig = plt.figure()
+                        ax1 = fig.add_subplot(111,projection='3d')
+                        ax1.plot_wireframe(xx, yy, zz)
+                        plt.show()
