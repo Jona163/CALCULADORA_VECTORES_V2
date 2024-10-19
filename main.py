@@ -606,3 +606,22 @@ while repetir:
                     print("Angulo beta : ",ang2)
                     print("Angulo gama : ",ang3)
                     plt.show()
+                else:
+                    print("OK :)")
+                rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                if rep == "s" or rep == "S":
+                    repetir = True
+                else:
+                    repetir=False
+            elif v == 4:
+                print("Ingresa la coordenada en el eje x del vector : 1")
+                a=int(input())
+                x = np.array([[0,a]])
+                print("Ingresa la coordenada en el eje y del vector : 1")
+                b=int(input())
+                y = np.array([[0,b]])
+                print("Ingresa la coordenada en el eje z del vector : 1")
+                c=int(input())
+                z = np.array([[0,c]])
+                print("Ingresa la coordenada en el eje x del vector : 2")
+                a2=int(input())
