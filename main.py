@@ -685,3 +685,11 @@ while repetir:
                     print("Angulo beta : ",ang2)
                     print("Angulo gama : ",ang3)
                     plt.show()
+                else:
+                    print("OK :)")
+                rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                if rep == "s" or rep == "S":
+                    repetir = True
+                else:
+                    repetir=False
+        elif case2 == 2:
