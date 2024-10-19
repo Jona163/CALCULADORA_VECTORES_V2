@@ -693,3 +693,14 @@ while repetir:
                 else:
                     repetir=False
         elif case2 == 2:
+            print("***********MENU**********")
+            print("1. SUMA")
+            print("2. RESTA")
+            print("3. PRODUCTO PUNTO")
+            print("4. PRODUCTO CRUZADO")
+            print("5. ECUACION DEL PLANO")
+            case3=int(input("Ingrese una opccion: "))
+
+
+            if case3 == 1:
+                v=int(input("\033[1;32m"+"Digite la cantidad de vectores a graficar de 2 a 4: "))
