@@ -801,3 +801,13 @@ while repetir:
                     c3=int(input())
                     print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 4")
                     a4=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 4")
+                    b4=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje z del vector : 4")
+                    c4=int(input())
+                    x=a+a2+a3+a4
+                    y=b+b2+b3+b4
+                    z=c+c2+c3+c4
+                    V=[x,y,z]
+                    print("Su vector resultante es: ", V)
+                    r=int(input("Desea graficvarlo 1.SI 2.NO: "))
