@@ -16,7 +16,6 @@ from mpl_toolkits.mplot3d import axes3d
 from fractions import Fraction                          
 from decimal import Decimal
 
-
 class ParOrdenado:
     def __init__(self,a,b):
         self.real = int(a)
@@ -46,7 +45,6 @@ def graficarComp(lista, colores = ["r", "g", "b"]):
     plt.xlabel('x')
     plt.ylabel('y')
     return plt.gca()
-
 
 def switch(case, q, w, e, r):
     sw={
@@ -160,7 +158,7 @@ while repetir:
                     ax = graficarComp([Vr])
                     ax.set_title("Vectores")
                     plt.show()
-               else:
+                else:
                     "OK :)"
                 rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
                 if rep == "s" or rep == "S":
@@ -183,7 +181,7 @@ while repetir:
                 print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 3")
                 b3=int(input())
                 infovector3=ParOrdenado(a3,b3)
-                print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 4"
+                print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 4")
                 a4=int(input())
                 print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 4")
                 b4=int(input())
@@ -310,6 +308,14 @@ while repetir:
                     ax = graficarComp([Vr])
                     ax.set_title("Vectores")
                     plt.show()
+                    #Hasta aqui github de hoy  17
+                else:
+                    "OK :)"
+                rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]: ")
+                if rep == "s" or rep == "S":
+                    repetir = True
+                else:
+                    repetir=False
             elif v == 4:
                 print("\033[1;32m"+"Ingresa la magnitud : 1")
                 a=int(input())
@@ -351,7 +357,7 @@ while repetir:
                     if angulo>0:
                         ang=angulo+180
                     elif angulo<0:
-                        ang=angulo+180
+                        ang=angulo-180
                     xr=Result*math.cos(ang)
                     yr=Result*math.sin(ang)
                     Vr=ParOrdenado(xr,yr)
@@ -366,54 +372,288 @@ while repetir:
             else:
                 repetir=False
         elif case2 == 3:
-            print("\033[1;32m"+"Como vas a calcular")
-            print("\033[1;32m"+"1. Por componentes")
-            print("\033[1;32m"+"2. Por magnitudes y angulos")
-            n=int(input())
-            if n == 1:
+            print("**************Graficadora de Vectores**************")
+            print("1.Suma")
+            print("2.Resta")
+            print("3.Producto punto")
+            print("4.Producto cruz")
+            case3=int(input("Selecciona una opccion: "))
+
+            if case3 == 1:
+                v=int(input("\033[1;32m"+"Digite la cantidad de vectores a graficar de 2 a 4: "))
+
+                if v == 2:
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 1")
+                    a=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 1")
+                    b=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
+                    a2=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 2")
+                    b2=int(input())
+                    v=[]
+                    x=a+a2
+                    y=b+b2
+                    V=[x,y]
+                    print("Su vector resultante es: ", V)
+                    r=int(input("Desea graficvarlo 1.SI 2.NO: "))
+                    if r == 1:
+                        Vr=ParOrdenado(x,y)
+                        ax = graficarComp([Vr])
+                        ax.set_title("Vectores")
+                        plt.show()
+                    else:
+                        print("BYE :)")
+                    rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                    if rep == "s" or rep == "S":
+                        repetir = True
+                    else:
+                        repetir=False
+                elif v == 3:
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 1")
+                    a=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 1")
+                    b=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
+                    a2=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 2")
+                    b2=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 3")
+                    a3=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 3")
+                    b3=int(input())
+                    x=a+a2+a3
+                    y=b+b2+b3
+                    V=[x,y]
+                    print("Su vector resultante es: ", V)
+                    if r == 1:
+                        Vr=ParOrdenado(x,y)
+                        ax = graficarComp([Vr])
+                        ax.set_title("Vectores")
+                        plt.show()
+                    else:
+                        print("BYE :)")
+                    rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                    if rep == "s" or rep == "S":
+                        repetir = True
+                    else:
+                        repetir=False
+                elif v == 4:
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 1")
+                    a=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 1")
+                    b=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
+                    a2=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 2")
+                    b2=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 3")
+                    a3=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 3")
+                    b3=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 3")
+                    a4=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 3")
+                    b4=int(input())
+                    x=a+a2+a3+a4
+                    y=b+b2+b3+b4
+                    V=[x,y]
+                    print("Su vector resultante es: ", V)
+                    if r == 1:
+                        Vr=ParOrdenado(x,y)
+                        ax = graficarComp([Vr])
+                        ax.set_title("Vectores")
+                        plt.show()
+                    else:
+                        print("BYE :)")
+                    rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                    if rep == "s" or rep == "S":
+                        repetir = True
+                    else:
+                        repetir=False
+            elif case3 == 2:
+                v=int(input("\033[1;32m"+"Digite la cantidad de vectores a graficar de 2 a 4: "))
+
+                if v == 2:
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 1")
+                    a=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 1")
+                    b=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
+                    a2=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 2")
+                    b2=int(input())
+                    v=[]
+                    x=a-a2
+                    y=b-b2
+                    V=[x,y]
+                    print("Su vector resultante es: ", V)
+                    if r == 1:
+                        Vr=ParOrdenado(x,y)
+                        ax = graficarComp([Vr])
+                        ax.set_title("Vectores")
+                        plt.show()
+                    else:
+                        print("BYE :)")
+                    rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                    if rep == "s" or rep == "S":
+                        repetir = True
+                    else:
+                        repetir=False
+                elif v == 3:
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 1")
+                    a=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 1")
+                    b=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
+                    a2=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 2")
+                    b2=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 3")
+                    a3=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 3")
+                    b3=int(input())
+                    x=a-a2-a3
+                    y=b-b2-b3
+                    V=[x,y]
+                    print("Su vector resultante es: ", V)
+                    if r == 1:
+                        Vr=ParOrdenado(x,y)
+                        ax = graficarComp([Vr])
+                        ax.set_title("Vectores")
+                        plt.show()
+                    else:
+                        print("BYE :)")
+                    rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                    if rep == "s" or rep == "S":
+                        repetir = True
+                    else:
+                        repetir=False
+                elif v == 4:
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 1")
+                    a=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 1")
+                    b=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
+                    a2=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 2")
+                    b2=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 3")
+                    a3=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 3")
+                    b3=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 3")
+                    a4=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 3")
+                    b4=int(input())
+                    x=a-a2-a3-a4
+                    y=b-b2-b3-b4
+                    V=[x,y]
+                    print("Su vector resultante es: ", V)
+                    if r == 1:
+                        Vr=ParOrdenado(x,y)
+                        ax = graficarComp([Vr])
+                        ax.set_title("Vectores")
+                        plt.show()
+                    else:
+                        print("BYE :)")
+                    rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                    if rep == "s" or rep == "S":
+                        repetir = True
+                    else:
+                        repetir=False
+            elif case3 == 3:
+                print("\033[1;32m"+"Como vas a calcular")
+                print("\033[1;32m"+"1. Por componentes")
+                print("\033[1;32m"+"2. Por magnitudes y angulos")
+                n=int(input())
+                if n == 1:
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 1")
+                    a=int(input())
+                    print("Ingresa la coordenada en el eje y del vector : 1")
+                    b=int(input())
+                    infovector=ParOrdenado(a,b)
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
+                    a2=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 2")
+                    b2=int(input())
+                    mag1 = sqrt((a*a)+(b*b))
+                    mag2 = sqrt((a2*a2)+(b2*b2))
+                    magr = (mag1*mag2)
+                    r = (a*a2) + (b*b2)
+                    te = acos((r)/(magr))
+                    t=te.real
+                    tt=math.degrees(t)
+                    print("\033[1;32m"+"Teta : ",tt)
+                    pr = (magr)*(cos(tt))
+                    prr=pr.real
+                    print("\033[1;32m"+"Su producto punto es: ",prr)
+                    rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                    if rep == "s" or rep == "S":
+                        repetir = True
+                    else:
+                        repetir=False
+                elif n == 2:
+                    print("\033[1;32m"+"Ingrese la magnitud del vector A: ")
+                    m1=int(input())
+                    print("\033[1;32m"+"Ingrese la magnitud del vector B: ")
+                    m2=int(input())
+                    mr = (m1*m2)
+                    print("\033[1;32m"+"Ingresa el angulo: ")
+                    a=int(input())
+                    pr = (mr)*(cos(a))
+                    prr = pr.real
+                    print("\033[1;32m"+"Su producto punto es: ",prr)   
+                    rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                    if rep == "s" or rep == "S":
+                        repetir = True
+                    else:
+                        repetir=False
+            elif case3 == 4:
                 print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 1")
                 a=int(input())
-                print("Ingresa la coordenada en el eje y del vector : 1")
+                print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 1")
                 b=int(input())
-                infovector=ParOrdenado(a,b)
                 print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
                 a2=int(input())
                 print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 2")
                 b2=int(input())
-                mag1 = sqrt((a*a)+(b*b))
-                mag2 = sqrt((a2*a2)+(b2*b2))
-                magr = (mag1*mag2)
-                r = (a*a2) + (b*b2)
-                te = acos((r)/(magr))
-                print("\033[1;32m"+"Teta : ",te)
-                pr = (magr)*(cos(te))
-                print("\033[1;32m"+"Su producto punto es: ",pr)
-                rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                A=[a,b]
+                B=[a2,b2]
+                pp=np.cross(A, B)
+                print("\033[1;32m"+"Su producto cruzado es: ",pp)
+                rep=(input(("¿Desea graficar mas vectores? S/N")))
                 if rep == "s" or rep == "S":
                     repetir = True
                 else:
                     repetir=False
-            elif n == 2:
-                print("\033[1;32m"+"Ingrese la magnitud del vector A: ")
-                m1=int(input())
-                print("\033[1;32m"+"Ingrese la magnitud del vector B: ")
-                m2=int(input())
-                mr = (m1*m2)
-                print("\033[1;32m"+"Ingresa el angulo: ")
-                a=int(input())
-                pr = (mr)*(cos(a))
-                print("\033[1;32m"+"Su producto punto es: ",pr)   
-                rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
-                if rep == "s" or rep == "S":
-                    repetir = True
-                else:
-                    repetir=False             
+        elif case2 == 4:
+            print("Ingresa la cordenadas x del vector")
+            x1=int(input())
+            print("Ingresa la cordenada y del vector")
+            y1=int(input())
+            print("Ingresa la cordenadas a del vector directriz")
+            a=int(input())
+            print("Ingresa la cordenada b del vector directriz")
+            b=int(input())
+            t=1
 
+            x=a*t+x1
+            y=b*t+y1
+            xy=[x,y]
+            print("Su vector complementario es: ",xy)
+
+            ax = plt.axes()
+            ax.arrow(0,0, x1,y1 , head_width=0.5, head_length=0.1,color='blue')
+            ax.arrow(x1,y1, a,b , head_width=0.5, head_length=0.1, color='green')
+            ax.arrow(0,0, x,y , head_width=0.5, head_length=0.01, color='red')
+            plt.show()
+
+            
     elif case == 2:
         print("**************Graficadora de Vectores**************")
         print("1. Graficar por Coordenadas")
-        print("2. Producto punto")
-        print("3. Poducto Cruz")
+        print("2. Operaciones basicas")
         case2=int(input("Selecciona una Opcion ")) 
 
         if case2 == 1:
@@ -549,63 +789,6 @@ while repetir:
                     print("Angulo beta : ",ang2)
                     print("Angulo gama : ",ang3)
                     plt.show()
-            elif v == 3:
-                print("Ingresa la coordenada en el eje x del vector : 1")
-                a=int(input())
-                x = np.array([[0,a]])
-                print("Ingresa la coordenada en el eje y del vector : 1")
-                b=int(input())
-                y = np.array([[0,b]])
-                print("Ingresa la coordenada en el eje z del vector : 1")
-                c=int(input())
-                z = np.array([[0,c]])
-                print("Ingresa la coordenada en el eje x del vector : 2")
-                a2=int(input())
-                x2 = np.array([[0,a2]])
-                print("Ingresa la coordenada en el eje y del vector : 2")
-                b2=int(input())
-                y2 = np.array([[0,b2]])
-                print("Ingresa la coordenada en el eje z del vector : 2")
-                c2=int(input())
-                z2 = np.array([[0,c2]])
-                print("Ingresa la coordenada en el eje x del vector : 3")
-                a3=int(input())
-                x3 = np.array([[0,a3]])
-                print("Ingresa la coordenada en el eje y del vector : 3")
-                b3=int(input())
-                y3 = np.array([[0,b3]])
-                print("Ingresa la coordenada en el eje z del vector : 3")
-                c3=int(input())
-                z3 = np.array([[0,c3]])
-                fig = plt.figure()
-                ax1 = fig.add_subplot(111,projection='3d')
-                ax1.plot_wireframe(x, y, z)
-                ax1.plot_wireframe(x2, y2, z2)
-                ax1.plot_wireframe(x3, y3, z3)
-                plt.show()
-                r=input(("Desea calcular el vector resultante S/N: "))
-                if r == "s" or r == "S":
-                    rx=(a+a2+a3)
-                    xr = np.array([[0,rx]])
-                    ry=(b+b2+b3)
-                    yr = np.array([[0,ry]])
-                    rz=(c+c2+c3)
-                    zr = np.array([[0,rz]])
-                    Result=math.sqrt((rx*rx)+(ry*ry)+(rz*rz))
-                    angulo=(math.acos(rx/Result))
-                    angulo2=(math.acos(ry/Result))
-                    angulo3=(math.acos(rz/Result))
-                    ang=math.degrees(angulo)
-                    ang2=math.degrees(angulo2)
-                    ang3=math.degrees(angulo3)
-                    fig = plt.figure()
-                    ax1 = fig.add_subplot(111,projection='3d')
-                    ax1.plot_wireframe(xr, yr, zr)
-                    print("ANGULOS DEL VECTOR R: ")
-                    print("Angulo alpha : ",ang)
-                    print("Angulo beta : ",ang2)
-                    print("Angulo gama : ",ang3)
-                    plt.show()
                 else:
                     print("OK :)")
                 rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
@@ -639,11 +822,6 @@ while repetir:
                 b3=int(input())
                 y3 = np.array([[0,b3]])
                 print("Ingresa la coordenada en el eje z del vector : 3")
-                c3=int(input())
-                z3 = np.array([[0,c3]])
-                print("Ingresa la coordenada en el eje x del vector : 4")
-                a4=int(input())
-               print("Ingresa la coordenada en el eje z del vector : 3")
                 c3=int(input())
                 z3 = np.array([[0,c3]])
                 print("Ingresa la coordenada en el eje x del vector : 4")
@@ -773,7 +951,8 @@ while repetir:
                         ax1 = fig.add_subplot(111,projection='3d')
                         ax1.plot_wireframe(xx, yy, zz)
                         plt.show()
-                   else:
+                        #hasta aqui git hoy
+                    else:
                         print("BYE :)")
                     rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
                     if rep == "s" or rep == "S":
@@ -789,7 +968,7 @@ while repetir:
                     c=int(input())
                     print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
                     a2=int(input())
-                   print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 2")
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 2")
                     b2=int(input())
                     print("\033[1;32m"+"Ingresa la coordenada en el eje z del vector : 2")
                     c2=int(input())
@@ -811,6 +990,7 @@ while repetir:
                     V=[x,y,z]
                     print("Su vector resultante es: ", V)
                     r=int(input("Desea graficvarlo 1.SI 2.NO: "))
+                    #hasta aqui git hoy 19/10
                     if r == 1:
                         xx=np.array([[0,x]])
                         yy=np.array([[0,y]])
@@ -963,7 +1143,7 @@ while repetir:
                     print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 1")
                     b=int(input())
                     y = np.array([[0,b]])
-                   print("\033[1;32m"+"Ingresa la coordenada en el eje z del vector : 1")
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje z del vector : 1")
                     c=int(input())
                     z = np.array([[0,c]])
                     print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
@@ -988,7 +1168,7 @@ while repetir:
                     print("\033[1;32m"+"Su producto punto es: ",p)
                     rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
                     if rep == "s" or rep == "S":
-                       repetir = True
+                        repetir = True
                     else:
                         repetir=False
                 elif m == 2:
