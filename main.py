@@ -988,3 +988,31 @@ while repetir:
                     print("\033[1;32m"+"Su producto punto es: ",p)
                     rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
                     if rep == "s" or rep == "S":
+                       repetir = True
+                    else:
+                        repetir=False
+                elif m == 2:
+                    print("\033[1;32m"+"Ingrese la magnitud del vector A: ")
+                    m1=int(input())
+                    print("\033[1;32m"+"Ingrese la magnitud del vector B: ")
+                    m2=int(input())
+                    mr = (m1*m2)
+                    print("\033[1;32m"+"Ingresa el angulo: ")
+                    a=int(input())
+                    pr = (mr)*(cos(a))
+                    p=pr.real
+                    print("\033[1;32m"+"Su producto punto es: ",p)
+                    rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                    if rep == "s" or rep == "S":
+                        repetir = True
+                    else:
+                        repetir=False
+            elif case3 == 4:
+                print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 1")
+                a=int(input())
+                print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 1")
+                b=int(input())
+                print("\033[1;32m"+"Ingresa la coordenada en el eje z del vector : 1")
+                c=int(input())
+                print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
+                a2=int(input())
