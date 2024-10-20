@@ -1119,3 +1119,11 @@ while repetir:
                     ax1.plot_wireframe(x3, y3, z3, color='g')
                     ax1.plot(np.array([0,0]), np.array([0,0]), np.array([0,0]), marker='o', color='y')
                     plt.show()
+
+                else:
+                    print("BYE")
+                rep=(input(("¿Desea graficar mas vectores? S/N")))
+                if rep == "s" or rep == "S":
+                    repetir = True
+                else:
+                    repetir=False
