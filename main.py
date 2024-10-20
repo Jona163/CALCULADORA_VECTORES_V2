@@ -1108,3 +1108,14 @@ while repetir:
                         v22=(pp[2]*-1)
                         v3=v2+v22
                     else:
+                        v3=v1[2]+pp[2]
+                    x3=np.array([[0,v1[0]]])
+                    y3=np.array([[0,v1[1]]])
+                    z3=np.array([[0,v3]])
+                    fig = plt.figure()
+                    ax1 = fig.add_subplot(111,projection='3d') 
+                    ax1.plot_wireframe(x, y, z, color='b')
+                    ax1.plot_wireframe(x2, y2, z2, color='y')                        
+                    ax1.plot_wireframe(x3, y3, z3, color='g')
+                    ax1.plot(np.array([0,0]), np.array([0,0]), np.array([0,0]), marker='o', color='y')
+                    plt.show()
