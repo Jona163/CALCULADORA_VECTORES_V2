@@ -857,3 +857,28 @@ while repetir:
                         ax1 = fig.add_subplot(111,projection='3d')
                         ax1.plot_wireframe(xx, yy, zz)
                         plt.show()
+                    else:
+                        print("BYE :)")
+                    rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                    if rep == "s" or rep == "S":
+                        repetir = True
+                    else:
+                        repetir=False
+                elif v == 3:
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 1")
+                    a=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 1")
+                    b=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje z del vector : 1")
+                    c=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
+                    a2=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 2")
+                    b2=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje z del vector : 2")
+                    c2=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 3")
+                    a3=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 3")
+                    b3=int(input())
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje z del vector : 3")
