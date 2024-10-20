@@ -882,3 +882,23 @@ while repetir:
                     print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 3")
                     b3=int(input())
                     print("\033[1;32m"+"Ingresa la coordenada en el eje z del vector : 3")
+                    c3=int(input())
+                    x=a-a2-a3
+                    y=b-b2-b3
+                    z=c-c2-c3
+                    V=[x,y,z]
+                    print("Su vector resultante es: ", V)
+                    r=int(input("Desea graficvarlo 1.SI 2.NO: "))
+                    if r == 1:
+                        xx=np.array([[0,x]])
+                        yy=np.array([[0,y]])
+                        zz=np.array([[0,z]])
+                        fig = plt.figure()
+                        ax1 = fig.add_subplot(111,projection='3d')
+                        ax1.plot_wireframe(xx, yy, zz)
+                        plt.show()
+                    else:
+                        print("BYE :)")
+                    rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                    if rep == "s" or rep == "S":
+                        repetir = True
