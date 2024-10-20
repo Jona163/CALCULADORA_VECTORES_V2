@@ -1076,3 +1076,24 @@ while repetir:
                 pp=np.cross(A, B)
                 perMag=(np.dot(pp,pp))**0.5
                 ecc=(pp[0]*a)+(pp[1]*b)+(pp[2]*c)
+                
+                if ecc>0:
+                    D=0-ecc
+                elif ecc<=0:
+                    D=0+ecc
+                print("El parametro D de la ecuacion es: ",D)
+                print("La ecuacion general del plano es; ",pp[0],"x",pp[1],"y",pp[2],"z + ",D)
+                r=int(input("¿Desea gfaficarla? 1.SI 2.NO: "))
+                if r==1:
+                    x=np.array([[0,a]])
+                    y=np.array([[0,b]])
+                    z=np.array([[0,c]])
+                    x2=np.array([[0,a2]])
+                    y2=np.array([[0,b2]])
+                    z2=np.array([[0,c2]])
+                    mag=math.sqrt((pp[0]*pp[0])+(pp[1]*pp[1])+(pp[2]*pp[2]))
+                    u1=Fraction(1/mag)
+                    u=((-(b+c)/a),(-(a+c)/b),(-((a+b)/c)))
+                    b3=b2*-1
+                    v=[b3,a,0]
+                    v1=np.cross(v,[0,1,0])
