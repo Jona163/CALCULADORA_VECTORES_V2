@@ -1037,3 +1037,20 @@ while repetir:
                     maa=ma.real
                     ma22=ma2.real
                     mp=mm.real
+                    print("Magnitud de A:",maa )
+                    print("Magnitud de B: ",ma22)
+                    print("Magnitud del producto: ",mp)
+                    print("Angulo Teta: ",tt)
+                print("\033[1;32m"+"¿Desea graficarlo? 1. YES 2.NO")
+                n=int(input())
+                if n == 1:
+                    x=np.array([[0,pp[0]]])
+                    y=np.array([[0,pp[1]]])
+                    z=np.array([[0,pp[2]]])
+                    fig = plt.figure()
+                    ax1 = fig.add_subplot(111,projection='3d')
+                    ax1.plot_wireframe(x, y, z)
+                    plt.show()
+                elif n == 2:
+                    print("BYE :)")
+                rep=(input(("¿Desea graficar mas vectores? S/N")))
