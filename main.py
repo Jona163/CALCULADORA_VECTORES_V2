@@ -1016,3 +1016,24 @@ while repetir:
                 c=int(input())
                 print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
                 a2=int(input())
+                print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 2")
+                b2=int(input())
+                print("\033[1;32m"+"Ingresa la coordenada en el eje z del vector : 2")
+                c2=int(input())
+                A=[a,b,c]
+                B=[a2,b2,c2]
+                pp=np.cross(A, B)
+                print("\033[1;32m"+"Su producto cruzado es: ",pp)
+                print("\033[1;32m"+"¿Desea obtener sus componentes? 1. YES 2.NO")
+                n2=int(input())
+                if n2 == 1:
+                    ma=sqrt((a*a)+(b*b)+(c*c))
+                    ma2=sqrt((a2*a2)+(b2*b2)+(c2*c2))
+                    mr=sqrt((pp[0]*pp[0])+(pp[1]*pp[1])+(pp[2]*pp[2]))
+                    mm=(ma*ma2)
+                    te=asin((mr)/(mm))
+                    t=te.real
+                    tt=math.degrees(t)
+                    maa=ma.real
+                    ma22=ma2.real
+                    mp=mm.real
