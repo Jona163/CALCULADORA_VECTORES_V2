@@ -1097,3 +1097,14 @@ while repetir:
                     b3=b2*-1
                     v=[b3,a,0]
                     v1=np.cross(v,[0,1,0])
+                    if v1[2]<0:
+                        v2=v1[2]*-1
+                        v3=v2+pp[2]
+                    elif pp[2]<0:
+                        v2=(pp[2]*-1)
+                        v3=v1[2]+v2
+                    elif v1[2]<0 and pp[2]<0:
+                        v2=v1[2]*-1
+                        v22=(pp[2]*-1)
+                        v3=v2+v22
+                    else:
