@@ -943,3 +943,23 @@ while repetir:
                         ax1 = fig.add_subplot(111,projection='3d')
                         ax1.plot_wireframe(xx, yy, zz)
                         plt.show()
+                    else:
+                        print("BYE :)")
+                    rep=input("\033[1;32m"+"¿Desea graficar mas vectores? [S/N]")
+                    if rep == "s" or rep == "S":
+                        repetir = True
+                    else:
+                        repetir=False
+            elif case3 == 3:
+                print("\033[1;32m"+"¿Como deseas consegurilo")
+                print("\033[1;32m"+"1. Por componentes")
+                print("\033[1;32m"+"2. Por magnitudes y angulos")
+                m=int(input())
+
+                if m == 1:
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 1")
+                    a=int(input())
+                    x = np.array([[0,a]])
+                    print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 1")
+                    b=int(input())
+                    y = np.array([[0,b]])
