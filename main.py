@@ -1054,3 +1054,25 @@ while repetir:
                 elif n == 2:
                     print("BYE :)")
                 rep=(input(("¿Desea graficar mas vectores? S/N")))
+                if rep == "s" or rep == "S":
+                    repetir = True
+                else:
+                    repetir=False
+            elif case3 == 5:
+                print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 1")
+                a=int(input())
+                print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 1")
+                b=int(input())
+                print("\033[1;32m"+"Ingresa la coordenada en el eje z del vector : 1")
+                c=int(input())
+                print("\033[1;32m"+"Ingresa la coordenada en el eje x del vector : 2")
+                a2=int(input())
+                print("\033[1;32m"+"Ingresa la coordenada en el eje y del vector : 2")
+                b2=int(input())
+                print("\033[1;32m"+"Ingresa la coordenada en el eje z del vector : 2")
+                c2=int(input())
+                A=[a,b,c]
+                B=[a2,b2,c2]
+                pp=np.cross(A, B)
+                perMag=(np.dot(pp,pp))**0.5
+                ecc=(pp[0]*a)+(pp[1]*b)+(pp[2]*c)
